@@ -1,0 +1,287 @@
+# -*- mode: org -*-
+# -*- coding: utf-8 -*-
+#+STARTUP: overview inlineimages logdrawer
+#+LATEX_CLASS: elsarticle
+#+LATEX_CLASS_OPTIONS: [preprint,12pt]
+#+LATEX_HEADER: \input{settings_article.tex}
+#+LANGUAGE: en
+#+TAGS: article(a) home(h) blog(b) noexport(n) Stats(S) deprecated(d) ignore(i)
+#+TAGS: vulgarization(v) teaching(t) R(R) OrgMode(O) Python(P)
+#+EXPORT_SELECT_TAGS: article
+#+OPTIONS: H:3 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t ~:~
+#+OPTIONS: LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+OPTIONS: creator:nil timestamp:nil skip:nil
+#+OPTIONS: author:nil title:t date:t
+
+#+EXPORT_SELECT_TAGS: 
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+COLUMNS: %25ITEM %TODO %3PRIORITY %TAGS
+#+SEQ_TODO: TODO(t!) STARTED(s!) WAITING(w@) APPT(a!) | DONE(d!) CANCELLED(c!) DEFERRED(f!)
+
+#+BEGIN_EXPORT latex
+\begin{frontmatter}
+
+\title{Bidirectional flow appearance by a heating source in a confined
+  enclosure in natural convection}
+
+\author[label1,label3]{P. Becerra Barrios\corref{cor1}}
+
+\address[label1]{Laboratoire IUSTI, UMR CNRS 7343, Aix-Marseille Université, \mbox{5 rue Enrico Fermi, 13453 Marseille, France}}
+\address[label2]{ \mbox{Institut de Radioprotection et de Sûreté
+    Nucléaire (PSN-RES/SA2I)}, \mbox{Centre de Cadarache, 13115 Saint-Paul-Lez-Durance}, France}
+\address[label3]{School of Mechanical Engineering, University of Costa Rica, Costa Rica} 
+\cortext[cor1]{Corresponding author}
+\ead{patricio.becerra@ucr.ac.cr}
+
+\author[label1]{K. Varrall}
+
+\author[label2]{H. Pretrel}
+%\ead{hugues.pretrel@irsn.fr}
+
+\author[label2]{S. Vaux}
+%\ead{samuel.vaux@irsn.fr}
+
+\author[label1]{\mbox{O. Vauquelin}}
+%\ead{olivier.vauquelin@univ-amu.fr}
+
+\begin{abstract}
+
+
+\end{abstract}
+
+\begin{keyword}
+bidirectional flow \sep horizontal vent \sep natural ventilation
+\end{keyword}
+
+\end{frontmatter}
+
+\linenumbers
+#+END_EXPORT
+
+* Introduction
+
+Test gitlab - push overleaf
+
+Natural smoke venting to the atmosphere from a building using its buoyancy-driven force is an alternative of forced exhausting systems in the case of a steady fire scenario in a compartment. This natural ventilation strategy is known as displacement ventilation. In displacement ventilation, two-layer stratification is established in a enclosure when an inflow fresh air enters at low levels and displaces the contaminated air to an upper opening with little or no mixing at the interface between the layers, see Linden \cite{linden_1999}, leaving a clear passage for the evacuation of occupants and movement of fire fighters. On the other hand, if fresh air also enters by the upper opening as a consequence of a reduction of the lower opening area, bidirectional exchange flow occurs at the top vent and the dense fluid mixes with the smoke cooling and increasing the depth of the hot layer to the floor, delaying the draining of the toxic air from the enclosure through the upper vent.
+
+Linden et al. \cite{linden_lane-serff_smeed_1990} investigated theoretically and experimentally the 'emptying-filling box' problem containing a single or multiple sources of buoyancy in an enclosure of height $H$ and cross-sectional area $S$ connected to the surroundings by two openings, one at the top and one in the base, of areas $a_T$ and $a_B$ respectively. They presented a model to predict the ventilation flow rate and the thermal stratification at steady state under displacement ventilation. The interface height between the layers, one layer at ambient density and a less dense layer above, is function of the opening areas expressed by an 'effective' area $A^*$, the height $H$ of the space and the entrainment of the plume, and no dependence of the buoyancy flux source, nor on the floor area. Rooney & Linden \cite{rooney_linden_1997} considered the case of a steady fire on the natural ventilation problem using the non-Boussinesq plume theory. The transients of the ventilated filling box with a continuous source of buoyancy under displacement ventilation leading to the steady state has been examined by Kaye & Hunt \cite{kaye_hunt_2004}. Bower et al. \cite{bower_caulfield_2008} investigated the transient evolution of an emptying filling box when the strength of a low-level point source of heat is changed instantaneously.
+
+The emptying process is examined by Coffey and Hunt \cite{coffey_hunt_2010} to extend the Linden et al. model
+\cite{linden_lane-serff_smeed_1990} for which interfacial mixing alters the initial two-layer stratification while the draining flow remains constant in one sense under three-layer stratification. Hunt and Coffey \cite{hunt_coffey_2010} investigated the transient draining of a fluid from a container to a less dense quiescent external ambient through a combination of openings in the top and the base of the box.
+
+# The fluids were initially stratified in two homogeneous layers of different densities, one layer at ambient density and a denser layer of height $h_0$ below.
+They identified experimentally the conditions of the openings to lead an unidirectional flow and which lead to bidirectional flow, based on the initial stratification. Four patterns of flow were classified expressing two Froude numbers: classical displacement, displacement flow with interfacial mixing, exchange flow  and exchange flow with interfacial mixing.
+# One Froude number is related to the direction of the flow at the  base and the other to the interfacial mixing associated to the  replacing flow at the top opening. Three geometrical parameters  $R=a_T/a_B$, $\zeta_0= h_0/H$ and $\lambda_T=\sqrt{a_T}/h_0$ were  used to express these Froude numbers.
+Particularly, they observed for the geometrical parameter $R$, the ratio of the top and the base opening areas, the flow was bidirectional at the base and the incoming flow of replacement fluid through the top was unidirectional throughout the draining when $R\lesssim 1/4$.
+
+In this paper we revised experimentally the combination of the top and base openings to achieve a bidirectional exchange flow at the vent from unidirectional flow using a continuous buoyant source in an enclosure, starting by small pool fires in transients and latter with electrical resistors to examine the effect of the source at steady state. The main objective is to identify the limit of the emptying-filling box model when the area of the low-level opening has been reduced to such an extent that the model still predicts two-layer stratification in displacement flow instead of exchange flow at the vent in a mixing-like flow below the interface, as show in Figure \ref{fig:bidi}. %The transition from unidirectional to bidirectional flow as a result of closing a door or a lower vent in an enclosure fire, could impact the smoke layer and the dynamics of the fire.
+
+The paper is structured in three sections. The experimental apparatus and protocol is described in \S2. The results and their analysis are presented in \S3. Finally, discussions and conclusion are drawn in \S4.
+
+\begin{figure}[h!]
+\centering
+\begin{subfigure}[b]{0.475\textwidth}
+  \centering
+  \tikz[remember picture]\node[inner sep=0pt,outer sep=0pt](a)
+  {\includegraphics[width=0.75\linewidth]{Tremie_mono_z4_art}};
+  \caption{}
+  \label{fig:mono}
+\end{subfigure}
+\begin{subfigure}[b]{0.475\textwidth}
+  \centering
+  \tikz[remember picture]\node[inner sep=0pt,outer sep=0pt](b)
+  {\includegraphics[width=0.75\linewidth]{Tremie_mono_z6_art}};
+  \caption{}
+  \label{fig:bidi}
+\end{subfigure}
+%\tikz\draw[-Latex,line width=1.5pt] (1.0,2.5) -- (2.0,2.5);
+%node[midway,above,text=black,font=\Large\bfseries\sffamily] {?}; line width=1.5pt,-stealth,black
+\tikz[remember picture,overlay]\draw[-latex,line width=1pt] ([xshift=3mm]a.east) -- ([xshift=-2mm]b.west);
+\caption{Unidirectional flow in classic displacement ventilation for a single point source of buoyancy (a) and the impact over the smoke layer by a bidirectional flow at the vent for the same reduced low-level area, in an exchange flow with interfacial mixing flow pattern (b). The smoke layer in (b) is expected to be colder and wider.}
+\label{fig:model}
+\end{figure}
+
+\begin{figure}
+\begin{tikzpicture}
+\centering
+\node [anchor=south west, inner sep=0] (image) at
+(0,0){\includegraphics[scale=0.25]{Shema_mono2bidi_tex.eps}};
+\begin{scope}[x={(image.south east)},y={(image.north west)}]
+\node at (0.175,0.25){$\rho_0$};
+\node at (0.175,0.65){$\rho$};
+\node at (0.34,0.94){$\rho_0$};
+\node at (0.927,0.94){$\rho_0$};
+\node at (0.765,0.45){$\rho$};
+\node at (0.34,-0.05){\footnotesize Source};
+\node at (0.927,-0.05){\footnotesize Source};
+%\draw [xstep=0.05,ystep=0.05,gray, very thin] (0,0) grid (1,1);
+\end{scope}
+\end{tikzpicture}
+\caption{Transition from a unidirectional flow in classic displacement
+  ventilation for a single point source of buoyancy at the horizontal opening to a bidirectional flow induced by the confinement of the room by closing the air inlet in the lower part.}
+\label{fig:bidi2mono}
+\end{figure}
+
+* Materials and Methods
+** Experimental set-up
+The experimental apparatus, as shown in Figure \ref{fig:set-up},
+consist in two compartments superposed connected by a circular
+horizontal opening. The internal dimensions of the lower compartment
+are 1m x 1m x 1.5m, and the dimensions of the upper one are 1m x 1m x
+1m. The partition between the compartments, which receive the vent, is
+38mm tick in silicate of calcium. The vent diameters used in the
+experiments were 127mm, 152mm and 191mm. The steel framework allows
+different types of wall materials: glass, steel and insulating
+material. The lower compartment is ventilated naturally through a
+variable low-level opening $a_B$ within the range $0 \leqslant a_B
+\leqslant 400\,\si{cm^2}$ using a plate with circular holes of 1 cm
+diameter. The holes were plugged with silicone caps to provide an
+air-tight seal. Two types of heat source in the lower compartment were
+employed in the experiments. In one, n-heptane $C_7H_{16}$ pool fire was
+burnt in pyrex pans of 40, 60 and 80 mm diameter. In the other,
+heating was achieved by one or two electrical resistor of 2kW
+electrical power each. A semi-elliptical fine wire mesh was located to
+reduce the ceiling jet effect on the flow through the horizontal
+opening produced by the source. The source was positioned at 20 cm
+above the floor level in the opposed side of the intake air. Type K
+thermocouples of 0.5 mm diameter were used to determine the gas
+temperature evolution in both compartments (see figure \ref{fig:TC})
+and at the lower heigh of the vent in eight equidistant points. The
+thermocouples were plugged on a National Instruments (NI) Compact DAQ
+Ethernet chassis and the signals were recorded at a 5 or 10 Hz
+sampling frequency via the NI Signal Express software. The fuel mass
+loss was measured by an electronic scale with an accuracy of $\pm\,\SI{0.01}{g}$ and recorded at a 1 Hz sampling frequency. 
+
+\begin{figure}[h]
+\centering
+\begin{subfigure}[t]{0.5\textwidth}
+  \centering
+  \includegraphics[height=6.0cm]{STYX_4}
+  \caption{}
+  \label{photo_1}
+\end{subfigure}
+%\hfill
+\begin{subfigure}[t]{0.48\textwidth}
+  \centering
+  \includegraphics[height=6.2cm]{TCsv7_art}
+  \caption{}
+  \label{fig:TC}
+\end{subfigure}
+\caption{Experimental set-up. (a) Photography and (b) schematic representation including thermocouples distribution in the lower level and at the vent (section view A-A).}
+\label{fig:set-up}
+\end{figure}
+
+\subsection{Experimental protocol}
+For a given vent diameter $D$ of area $a_T$, the low-level opening area $a_B$ was fixed at the beginning of the experiment to assure an unidirectional flow at the vent before the ignition of the fuel or the heating of the air by electrical resistors. The initial geometrical ratio of the base and top opening areas $R=a_B/a_T$ was sufficiently large ($R>>1/4$). The inflow area was taken as the sum of the of the areas of the openings at the lower compartment following Linden et al. \cite{linden_lane-serff_smeed_1990}. After the ignition of the fire pool or reaching a thermal quasi-steady state by the resistors, the holes of the low-level opening were plugged at different time steps as a function of the source until to observe the bidirectional exchange flow at the vent. To identify the transition from unidirectional to bidirectional flow two methods were tested. The first method was a visual criteria using a class-3B laser sheet highlighting the lower compartment to determine the downward flow through the vent as show in Figure \ref{fig:visu}. After a continuous downward breaths of cold air plunged into the lower compartment, bidirectional flow pattern was established. The second criteria was the analysis of the fluctuations of the thermocouples at the vent before and after the transition and the comparative with the visual criteria.
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}
+  \node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[scale=0.125]{Figures/Bouffe}};
+  \begin{scope}[x={(image.south east)},y={(image.north west)}]
+    \draw[white,line width=0.75pt,rounded corners=1mm] (0.45,0.40) rectangle (0.81,0.82);
+    \draw[white, -latex, line width=0.6pt] (0.55,0.71) -- (0.63,0.59);
+  \end{scope}
+\end{tikzpicture}
+\caption{Visualisation of free convection downward cold flow into the smoke layer.}
+\label{fig:visu}
+\end{figure}
+
+\subsubsection*{Pool fire}
+For safety considerations, only the ceiling of the upper compartment was open to the surroundings for extracting the smoke produced by the combustion. After the ignition of the pool fire and reached a relative stable smoke layer, the time step plugging was about 6 minutes until the extinction by lack of fuel. Different step values of $R$ starting in unidirectional flow were tested in the experiments to identify more precisely the transition zone to the bidirectional flow.
+
+\subsubsection*{Electrical resistors}
+The glass walls of the upper compartment were removed to avoid a confined hot air over the vent due to the experiment duration. The thermal quasi-steady state in the lower compartment was reached by one or two resistors heating continuously the air for at least 4 hours leading to a stratified environment. Then the holes at the low-level opening were plugged to change the ratio $R$ of the opening areas at a time step of 20 minutes, estimated as the time to reach a new thermal quasi-steady state, until to obtain a bidirectional flow. The transition zone was identified by visual criteria highlighting seeding olive particles entering in the lower compartment. The seeding was generated by a TSI 9307-6 oil droplet generator and introduced into the flow during the experiment via a diffuser placed on the floor of the upper compartment.
+
+* Experimental results
+Figure \ref{fig:evol_mono-bidi_N} shows the evolution of the temperature of an experiment for a vent diameter $D$152mm and a pool fire of diameter 80mm for three opening area ratios. This figure illustrates the temperature fluctuations for an unidirectional flow and a bidirectional flow regime. The temperature at the vent always was decreasing and a slightly drop was observed when the ratio of the opening areas was $R=0$ corresponding to a confined enclosure. The decreasing temperature is related to the heat release rate which decreased when the ratio $R$ were also reduced. The mass loss rate were always decreasing even though it was expected a constant rate for using a pyrex pan, where heat transfer between the pan walls and the flame could be considered not significant. The fluctuations observed in the latter configuration were at least three times the fluctuations for the unidirectional flow regime.
+
+\begin{figure}[h]
+\centering
+\resizebox{0.5\textwidth}{!}{\input{Figures/TC_E_E50_D152_B80-fig}}
+\caption{Temperature evolution at the vent and transition from unidirectional flow to bidirectional flow for three opening area ratios for a vent $D$152mm and 80mm pool fire.}
+\label{fig:evol_mono-bidi_N}
+\end{figure}
+
+Vertical temperature profile evolution is shown in figure \ref{fig:contour} for the same experiment. After the bidirectional flow appearance in the compartment, the upper layer began to get colder and the lower layer hotter. In the bidirectional flow regime the cooling rate of the upper layers increased about minute 40 when $R=0$ and the regime was established until some instabilities of the flame have been observed with an increasing of the temperature before the extinction. Pulsating laminar flame was observed near extinction for most experiments.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.3]{Figures/Contour_profil_E50_D152_B80}
+\caption{Vertical temperature profile evolution of the lower compartment for a vent $D$152mm and 80mm pool fire}
+\label{fig:contour}
+\end{figure}
+
+In figure \ref{fig:profil} the vertical temperature profile for the
+unidirectional and bidirectional flow regimes is presented. The flow
+regime transition shows the cooling of the upper level and the heating
+of the lower level. Two-layer stratification in the unidirectional
+regime was not observed nor a three-zone layer for the bidirectional
+exchange flow with interfacial mixing, as had been observed by
+\cite{hunt_coffey_2010} in the initial transients using saline brine
+solution to model density contrast. In our experiments a linear
+increasing stratification of about \SI{30}{\degree C/m} was particularly observed in the bidirectional exchange flow exchange in a mixing-like flow.
+
+\begin{figure}[h!]
+\centering
+\resizebox{0.54\textwidth}{!}{\input{Figures/T_profil_E50_D152_B80-fig}}
+\caption{Vertical temperature profiles for $D$152mm and 80mm pool fire.}
+\label{fig:profil}
+\end{figure}
+
+Figure \ref{fig:evol_mono-bidi_R} presents the evolution for an experiment using two electrical resistors and a vent diameter $D$191mm. The bidirectional flow appeared visually into the lower compartment at $R=0.12$ where the temperature fluctuations increasing considerably respect to the unidirectional regime. The mean temperature in each interval increased after reducing the ratio $R$ except for the confined configuration ($R=0$), where a temperature drop and higher fluctuations were observed.
+
+\begin{figure}[h!]
+\centering
+\resizebox{0.54\textwidth}{!}{\input{Figures/TC_E_ER28_D191_2R-fig}}
+\caption{Evolution of the temperature at the vent and ratio $R$ of the opening areas for $D$191mm and two electrical resistors ($2R$)}
+\label{fig:evol_mono-bidi_R}
+\end{figure}
+
+Vertical temperature profiles of the lower compartment for the unidirectional flow and bidirectional flow regimes of same experiment is presented in figure \ref{fig:profil2}. The continuously heating of the resistors showed an even increasing of temperature of the whole room while $R$ is decreasing unlike the pool fire, in which the upper level was colder in the bidirectional flow regime. Unlike two-layer stratification as expected for the unidirectional regime, a linear increasing stratification with two principal slopes was observed, one about \SI{150}{\degree C/m} for the first \SI{25}{cm} and the other of about \SI{40}{\degree C/m}. The bidirectional regime showed an increasing of \SI{40}{\celsius} for the first \SI{35}{cm} and then a layer of mean temperature of about \SI{110}{\celsius} until a height $z=\SI{95}{cm}$ with a hot layer close to the ceiling of the lower room.
+
+\begin{figure}[h!]
+\centering
+\resizebox{0.53\textwidth}{!}{\input{Figures/T_profil_ER28_D191_2R-fig}}
+\caption{Vertical temperature profiles for $D$191mm and two electrical resistors ($2R$).}
+\label{fig:profil2}
+\end{figure}
+
+Figure \ref{fig:eta_R_N_D191} shows the density deficit $\eta$ of the upper layer as an indicator of the buoyancy driven flow refereed to the ambient temperature of the upper compartment as a function of the ratio $R$ at the condition of bidirectional flow appearance for the same vent diameter $D$. Density deficit was calculated as the ratio of the temperature difference of the hot layer of the lower compartment with the ambient temperature of the upper level and the ambient temperature, $\eta=\Delta T/T_0$. Figure \ref{fig:eta_N_D191} presents the results for three pool fire diameters and figure \ref{fig:eta_R_D191} for the experiments using one and two electrical resistors. In both cases the transition from unidirectional to bidirectional flow regime were determined visually in the range $0.10\leqslant R \leqslant 0.15$.
+
+\begin{figure}[h]
+\centering
+\begin{subfigure}[b]{0.48\textwidth}
+  \centering
+  \resizebox{\textwidth}{!}{\input{Figures/Eta_ab_at_N_D191-fig}}
+  \caption{}
+  \label{fig:eta_N_D191}
+\end{subfigure}
+\begin{subfigure}[b]{0.48\textwidth}
+  \centering
+  \resizebox{\linewidth}{!}{\input{Figures/Eta_ab_at_R_D191-fig}}
+  \caption{}
+  \label{fig:eta_R_D191}
+  \end{subfigure}
+\caption{Density deficit as a function of $R$ at visual bidirectional appearance for a vent $D$191mm. Pool fires (a) and electrical resistors (b).}
+\label{fig:eta_R_N_D191}
+\end{figure}
+
+Figure \ref{fig:syn} presents a summary of the experiments performed using pool fire and resistors for three vent diameters and a density deficit variation in the range $0.05\leqslant \eta \leqslant 0.30$. The transition zone for the three diameters were in the range of $0.10 \leqslant R \leqslant 0.15$, lower than the limit observed by Hunt and Coffey \cite{hunt_coffey_2010} for the emptying process in transients using water-brine solutions as the working fluid.
+
+\begin{figure}[h]
+\centering
+\resizebox{0.55\textwidth}{!}{\input{Figures/Eta_ab_at-fig}}
+\caption{Results synthesis.}
+\label{fig:syn}
+\end{figure}
+
+* Conclusion
+The transition zone from an unidirectional flow regime to a bidirectional exchange flow at the upper vent of an enclosure with vents at floor and ceiling levels was investigated experimentally. This zone was examined by the means of thermocouples response at the vent and visually using a laser sheet. Two different heating sources were used, pool fire and electrical resistors, to analyse the effect of transients and a quasi-stable thermal state respectively. In both cases, temperature fluctuations at the vent grew significantly in the bidirectional flow but this method was not effective to identify the bidirectional appearance for a density deficit of the upper layer less than 0.15. The vertical stratification of the compartment was linear increasing, even though a two-zone stratification were expected in the unidirectional flow pattern. A cooling of the upper layer was observed using pool fires in transients after the transition towards the bidirectional flow, however the experiments with resistors showed a constantly heating of the room. On the other hand, for both types of sources the mean temperature at vent level decreased in the confined space configuration, showing a vigorous exchange flow with the ambient fluid.
+
+These laboratory experiments reveal a limit for the 'emptying-filling box' model for heating sources when the lower opening area is reduced. The two-layer stratification could not be applicable after this limit towards bidirectional regime, as some two-model zone codes employ, and a mixing-like flow pattern with a linear thermal stratification takes place in the enclosure.
+
+
+
+
+#+LATEX: \bibliography{references}

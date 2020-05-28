@@ -1,0 +1,123 @@
+%%% Elsevier
+%% Use the option review to obtain double line spacing
+%% \documentclass[preprint,review,12pt]{elsarticle}
+
+%% Use the options 1p,twocolumn; 3p; 3p,twocolumn; 5p; or 5p,twocolumn
+%% for a journal layout:
+%% \documentclass[final,1p,times]{elsarticle}
+%% \documentclass[final,1p,times,twocolumn]{elsarticle}
+%% \documentclass[final,3p,times]{elsarticle}
+%% \documentclass[final,3p,times,twocolumn]{elsarticle}
+%% \documentclass[final,5p,times]{elsarticle}
+%% \documentclass[final,5p,times,twocolumn]{elsarticle}
+
+\usepackage{lineno}
+\modulolinenumbers[5]
+
+\journal{Journal of }
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%% Elsevier bibliography styles
+%%%%%%%%%%%%%%%%%%%%%%%
+%% To change the style, put a % in front of the second line of the current style and
+%% remove the % from the second line of the style you would like to use.
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Numbered
+%\bibliographystyle{model1-num-names}
+
+%% Numbered without titles
+%\bibliographystyle{model1a-num-names}
+
+%% Harvard
+%\bibliographystyle{model2-names.bst}\biboptions{authoryear}
+
+%% Vancouver numbered
+%\usepackage{numcompress}\bibliographystyle{model3-num-names}
+
+%% Vancouver name/year
+%\usepackage{numcompress}\bibliographystyle{model4-names}\biboptions{authoryear}
+
+%% APA style
+%\bibliographystyle{model5-names}\biboptions{authoryear}
+
+%% AMA style
+%\usepackage{numcompress}\bibliographystyle{model6-num-names}
+
+%% `Elsevier LaTeX' style
+\bibliographystyle{elsarticle-num}
+
+%%% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{amssymb}  % provides various useful mathematical symbols
+\usepackage{amsthm}   % provides extended theorem environments
+\usepackage{amssymb}
+\usepackage{csquotes}
+\usepackage{graphicx}
+\usepackage{caption}
+%\usepackage[justification=centering]{caption}
+\usepackage{subcaption}
+\usepackage{microtype}
+%\usepackage[hyphens]{url}
+%\usepackage[hidelinks]{hyperref} % boxes hidden, remove hidelinks if boxes are desired.
+%\usepackage{gensymb}
+%\usepackage{indentfirst}
+
+\makeatletter
+\AtBeginDocument{\def\@citecolor{black}}
+\AtBeginDocument{\def\@urlcolor{black}}
+\makeatother
+
+\usepackage{lipsum}
+\usepackage{verbatim}
+\usepackage{xcolor}
+\usepackage{adjustbox}
+\usepackage{siunitx}
+%\usepackage{times}
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usepackage{bm}
+\usetikzlibrary{arrows.meta,shapes.arrows}
+\usetikzlibrary{positioning}
+\usetikzlibrary{tikzmark}     % arrows in tex
+\usetikzlibrary{calc}         % (node)+(3cm,2cm)
+\tikzstyle{every picture}+=[remember picture]
+
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+\PassOptionsToPackage{cmyk}{xcolor}
+\pdfcompresslevel=0
+
+\usepackage{pgfgantt}
+\usepackage{pdflscape}
+\pgfplotsset{compat=newest} 
+\pgfplotsset{plot coordinates/math parser=false}
+
+\usepackage{tabularx}
+\usepackage{multicol}
+
+%%% Repertoire des figures
+\graphicspath{
+{Figures/}
+{figures/photos/}
+{../Presentations/Avancements/Figures/}
+{../Article_CFTL/figures/}
+{../Article_Apparition_Bidi/Figures/}
+{../Article_FRAMSUD/Figures/}
+}
+
+%%% Nombres adimensionnels
+\newcommand\Rey{\mbox{\textit{Re}}}  % Reynolds number
+\newcommand\Pran{\mbox{\textit{Pr}}} % Prandtl number, cf TeX's \Pr product
+\newcommand\Pe{\mbox{\textit{Pe}}}   % Peclet number
+\newcommand\Fr{\mbox{\textit{Fr}}}   % Froude number
+\newcommand\Gr{\mbox{\textit{Gr}}}   % Grashof number
+\newcommand\Ra{\mbox{\textit{Ra}}}   % Rayley number
+\newcommand\Nu{\mbox{\textit{Nu}}}   % Nusselt number
+
+
