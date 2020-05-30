@@ -45,7 +45,7 @@
 %\ead{olivier.vauquelin@univ-amu.fr}
 
 \begin{abstract}
-
+Test abstract
 
 \end{abstract}
 
